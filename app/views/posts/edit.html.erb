@@ -1,0 +1,27 @@
+<div>
+ <h2>スケジュール編集</h2>
+ <%= form_with model: @plan,url:"/posts/#{@plan.id}/update" do |form| %>
+    <div class="form">
+      <div class="field">
+        <%= form.label :title %>
+        <%= form.text_field :title,:value => @plan.title %>
+      </div>
+      <div class = "field">
+        <%= form.label :start_time %>
+        <%= form.datetime_field :start_time,:default => @plan.start_time %>
+      </div>
+
+      <div class = "field">
+        <%= form.label :end_time %>
+        <%= form.datetime_field :end_time,:default => @plan.end_time %>
+      </div>
+      <div class = "field">
+      <%= form.label :memo %>
+      <%= form.text_field :memo,:value => @plan.memo %>
+      </div>
+
+      <%= form.submit %>
+      <% end %>
+         
+    </div>
+</div>

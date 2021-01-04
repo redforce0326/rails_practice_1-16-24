@@ -1,3 +1,68 @@
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:#a0d8ef;
+}
+body{
+    margin-top:0;
+}
+header{
+    background-color:blue;
+    color:white;
+    height:70px;
+}
+.header-logo h1{
+    margin:0;
+    padding-top:10px;
+}
+/*tableのCSS*/
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th,table td{
+  text-align: center;
+  width: 10%;
+  padding: 15px 0;
+}
+/*新規投稿ボタン*/
+.post{
+    width:120px;
+    height:40px;
+    font-size:18px;
+    display:block;
+    border-radius: 10px;
+    background-color: #fadbda;
+    text-align: center;
+    margin-top:30px;
+}
+.field{
+    margin-bottom:15px;
+}
+.dates-box{
+    margin-top:15px;
+    margin-left:15px;
+}
+.text{
+    height:20px;
+    width:80px;
+}
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

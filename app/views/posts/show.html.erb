@@ -1,0 +1,24 @@
+<div class="detail_contents">
+ <table>
+   <tbody>
+     <tr>
+       <th>タイトル</th>
+       <td><%= @plan.title %></td>
+     </tr>  
+     <tr>
+       <th>開始時刻</th>
+       <td><%= @plan.set_date_1 %></td>
+     </tr> 
+      <tr>
+       <th>終了時刻</th>
+       <td><%= @plan.set_date_2 %></td>
+     </tr>  
+      <tr>
+       <th>メモ</th>
+       <td><%= @plan.memo %></td>
+     </tr>   
+   </tbody>  
+ </table>
+ <%= link_to("スケジュールを編集する","/posts/#{@plan.id}/edit") %>
+ <%= link_to("スケジュール一覧に戻る","/posts") %>
+</div>

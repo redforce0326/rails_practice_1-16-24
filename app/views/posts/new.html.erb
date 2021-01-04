@@ -1,0 +1,26 @@
+
+<%= form_with model: @plan,url:"/posts/create" do |form| %>
+<div class = "dates-box" >
+<div class = "field">
+ <%= form.label :title %>
+ <%= form.text_field :title %>
+</div>
+
+<div class = "field">
+ <%= form.label :start_time %>
+ <%= form.datetime_field :start_time %>
+</div>
+
+<div class = "field">
+ <%= form.label :end_time %>
+ <%= form.datetime_field :end_time %>
+</div>
+
+<div class = "field">
+ <%= form.label :memo %>
+ <%= form.text_field :memo  %>
+</div>
+
+<%= form.submit %>
+<% end %>
+</div>

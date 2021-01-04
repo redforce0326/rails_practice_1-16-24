@@ -1,0 +1,47 @@
+<div class = "main-contents">
+ <div class = "main-title">
+    <h2>スケジュール一覧</h2> 
+ </div>
+ <div class="table-box">
+ <table>
+    <thead>
+     <tr>
+       <th>ID</th>   
+       <th>Title</th>
+       <th>Memo</th>
+       <th>開始時刻</th>
+       <th>終了時刻</th>
+       <th>詳細</th>
+       <th>編集</th>
+       <th>削除</th>
+     </tr>
+    </thead>
+    <tbody>
+      <% @plan.each do |plan| %>
+      <tr>
+        <td><%= plan.id %></td>
+        <td><%= plan.title %></td>  
+        <td><%= plan.memo %></td> 
+        <td><%= plan.set_date_1 %></td> 
+        <td><%= plan.set_date_2 %></td> 
+        <td>
+          <%= link_to("詳細","/posts/#{plan.id}")  %>
+        </td>
+        <td>
+          <%= link_to("編集","/posts/#{plan.id}/edit")  %>
+        </td>
+        <td>
+          <%= link_to("削除","/posts/#{plan.id}/destroy",{method:"post"})  %>
+        </td>  
+      </tr> 
+      <% end %>
+    </tbody>
+ </table>  
+ </div>
+ <div class = "new post">
+   <%= link_to("新規投稿","/posts/new") %>
+ </div> 
+    
+    
+</div>
+
